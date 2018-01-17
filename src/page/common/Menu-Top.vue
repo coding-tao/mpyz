@@ -1,6 +1,6 @@
 <template>
     <header>
-        <el-col :span="21" :push="3">GlocalMe吉客猫后台</el-col>
+        <el-col :span="21" :push="3">萌派一族管理后台</el-col>
         <el-dropdown @command="handleCommand">
             <span class="el-dropdown-link">
                 <img alt="Avatar" src="../../images/avatar2.jpg">
