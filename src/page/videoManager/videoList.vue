@@ -13,7 +13,7 @@
             <table-list ref="tableList" :tableConfig='configList'>
                   <el-table-column  slot="image"  align="center" label="视频封面">
                       <template slot-scope="scope">
-                          <img :src="scope.row.infos[1].fileUrl" alt="">
+                          <img @click="imgClick(scope.row.infos[1].fileUrl)" :src="scope.row.infos[1].fileUrl" alt="">
                       </template>
                   </el-table-column>
                    <el-table-column  slot="video"  align="center" label="视频">
@@ -27,7 +27,13 @@
                     </template>
                   </el-table-column>
             </table-list>
-        </div>+
+        </div>
+        <el-dialog
+            :visible.sync="dialogVisible"
+            size="tiny"
+            >
+            <img :src="imgUrl" alt="">
+        </el-dialog>
     </div>
 </template>
 
@@ -68,7 +74,9 @@ export default {
                 type:'',
                 width:'',
                 isPagination:true
-            }
+            },
+            dialogVisible:false,
+            imgUrl:''
         }
     },
     components: {
@@ -81,14 +89,18 @@ export default {
         getList(){
             this.$refs.tableList.getList()
         },
-        delLevel(){
+        imgClick(url){
+            this.imgUrl = url;
+            this.dialogVisible = true;
+        },
+        delLevel(id){
             this.$confirm('确定删除?', '提示', {           
                 confirmButtonText: '确定',           
                 cancelButtonText: '取消',           
                 type: 'warning'         
             }).then(() => {           
-                let  url = CONSTANT.URL.GOOD.DELETEGOODS,
-                    param = {id:id}
+                let  url = CONSTANT.URL.INFO.DELETEREPLY,
+                    param = {msgId:id}
                 common.requestAjax(url,param,(res)=>{
                     if(res.status == 200){
                         this.$message({
@@ -145,12 +157,20 @@ export default {
             }
             img{
                 width: 100px;height: auto;
+                cursor: pointer;
             }
         }
         .pagination {
             text-align: center;
             width: 80%;
             margin-top: 60px;
+        }
+        .el-dialog__body{
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 400px;
+            }
         }
     }
 </style>

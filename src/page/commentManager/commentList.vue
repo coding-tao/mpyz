@@ -61,11 +61,11 @@ export default {
                     },
                     {
                        label:'评论用户',
-                       prop:'nickName'
+                       prop:'userName'
                     },
                     {
                        label:'时间',
-                       prop:'nickName'
+                       prop:'sendTime'
                     },
                     {
                       slot:'btn'
