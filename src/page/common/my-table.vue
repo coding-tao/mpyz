@@ -117,6 +117,7 @@
           }
         Object.assign(param, this.tableConfig.param)
         common.requestAjax(url, param, (res) => {
+          console.log(res,'resrsz')
           if (res.status == 200) {
             this.loading = false;
             let data = res.data;

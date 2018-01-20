@@ -19,14 +19,7 @@ import 'summernote/dist/summernote.css'
 
 Vue.use(VueResource);
 Vue.use(ElementUI)
-// router.beforeEach((to, from, next) => {
-//   console.log(common.getCookie('sessionId'))
-//   if(!common.getCookie('sessionId')){
-//     router.push("/loginPage");    
-//     next()
-//   }
-//   next()
-// })
+
 Vue.http.interceptors.push(function(request, next) {//拦截器
   // Vue.http.options.xhr = { withCredentials: true }
   // Vue.http.options.emulateHTTP = true
@@ -36,7 +29,6 @@ Vue.http.interceptors.push(function(request, next) {//拦截器
   next((res)=>{
     //401 登陆过期跳转
     if(res.data.status == 401){
-      console.log(router)
       router.push("/loginPage");
       common.setCookie('sessionId','')
     }

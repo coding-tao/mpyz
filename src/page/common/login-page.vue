@@ -41,6 +41,7 @@ export default {
 
             this.$http.post(url, param, {emulateJSON: true}).then(res => {
                 let data = res.data;
+                console.log(res)
                 if(data.status == 200){
                     let list = data.data.bussData;
                     this.$message({
