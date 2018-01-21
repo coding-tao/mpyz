@@ -1,0 +1,78 @@
+<view class="mpyz_home">
+    <view class="home_wrapper {{homeClass}}">
+        <view class="head_nav flex-box-align">
+            <view class="btn-select" bindtap="handleClickSelect">
+                <image src="../../assets/selection1.png"></image>
+            </view>
+            <view class="flex nav">
+                <text class="selected">视频</text>
+                <text bindtap="handleClickLeader">排行</text>
+            </view>
+            <view class="btn-video" bindtap="handleChooseVideo">
+                <image src="../../assets/video.png"></image>
+            </view>
+        </view>
+        <view class="home_content">
+            <view class="flex-box-container">
+                <view class="video_item" wx:for="{{homeList.bussData}}" wx:key="index" bindtap="handleClickItem" id="{{item.id}}">
+                    <view class="main_img">
+                        <image src="{{item.infos[1].fileUrl}}"></image>
+                    </view>
+                    <view class="video_info flex-box-align">
+                        <view class="avatar_info flex">
+                            <image src="{{item.avatarUrl}}"></image>
+                            <text>{{item.name}}</text>
+                        </view>
+                        <view class="zan_num">
+                            <image src="../../assets/like.png"></image>
+                            <text>{{item.hitCount}}</text>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+        <view class="{{overlayClass}}" bindtap="handleClickOverlay"></view>
+    </view>
+    <view class="me_fixed_modal {{className}}" wx:if="{{showOverlay}}">
+        <view class="me_info">
+            <image src="{{userInfo.avatarUrl}}"></image>
+            <view>{{userInfo.nickName}}</view>
+        </view>
+        <view>
+            <view class="cell flex-box-align" bindtap="handleClickPublish">
+                <view class="flex">我发布过的</view>
+                <image src="../../assets/arrow.png"></image>
+            </view>
+            <view class="cell flex-box-align" bindtap="handleClickLeader">
+                <view class="flex">我的排名</view>
+                <image src="../../assets/arrow.png"></image>
+            </view>
+            <view class="cell flex-box-align" bindtap="handleClickService">
+                <view class="flex">联系客服</view>
+                <image src="../../assets/arrow.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <block wx:if="{{showService}}">
+        <view class="service_modal">
+            <view class="title">联系客服</view>
+            <view class="btn-close" bindtap="handleCloseService">
+                <image src="../../assets/close.png"></image>
+            </view>
+            <view class="service_content">
+                <view>{{contact[0].name}}：{{contact[0].value}}</view>
+                <view>{{contact[1].name}}：{{contact[1].value}}</view>
+                <view>{{contact[2].name}}：{{contact[2].value}}</view>
+            </view>
+        </view>
+
+        <view class="service_overlay" bindtap="handleCloseService"></view>
+    </block>
+
+
+    <view class="cover" bindtap="handleClickCover" wx:if="{{showCover}}">
+        <image src="../../assets/cover2.png"></image>
+    </view>
+</view>

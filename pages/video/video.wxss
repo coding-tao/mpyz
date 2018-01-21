@@ -1,0 +1,56 @@
+@import "../../common/common.wxss";
+
+.video_publish {
+    background-color: #f8f8f8;
+}
+
+.video_content {
+    background-color: #fff;
+    padding: 11rpx 12rpx 24rpx 12rpx;
+}
+
+.video_uploaded {
+    width: 191rpx;
+    height: 272rpx;
+    position: relative;
+}
+
+.video_uploaded video {
+    width: 100%;
+    height: 100%;
+}
+
+.video_content textarea {
+    font-size: 24rpx;
+    margin-left: 27rpx;
+    width: 508rpx;
+    height: 272rpx;
+}
+
+.play {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 32rpx;
+    line-height: 32rpx;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .64);
+    font-size: 18rpx;
+}
+
+.btn-publish {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 97rpx;
+    background-color: #992424;
+    line-height: 97rpx;
+    font-size: 38rpx;
+    text-align: center;
+    color: #fff;
+}

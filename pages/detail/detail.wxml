@@ -1,0 +1,83 @@
+<view class="video_detail">
+    <view class="video">
+        <video src="{{detail.infos[0].fileUrl}}" controls="false"
+               show-play-btn="false" show-center-play-btn="false"
+                bindtimeupdate="handleUpdate">
+            <!--//bindplay="handlePlay"-->
+            <cover-view class="btns flex-box-container">
+                <cover-image class="btn-like" src="../../assets/zan.png" bindtap="handleClickLike"></cover-image>
+                <cover-image class="btn-share" src="../../assets/share.png"></cover-image>
+            </cover-view>
+        </video>
+        <view class="share">
+            <button open-type="share"></button>
+        </view>
+    </view>
+    <view>
+        <view class="play_num">{{detail.playCount}}播放</view>
+        <view class="flex-box-align item">
+            <image src="../../assets/message.png"></image>
+            <view class="latest_user">某某某：</view>
+            <view class="latest_comment">我家狗狗涛涛涛涛</view>
+        </view>
+        <view class="flex-box-align item">
+            <image src="../../assets/love.png"></image>
+            <view class="love_num">{{detail.hitCount}}个喜欢</view>
+        </view>
+        <view class="flex-box-align item">
+            <image src="../../assets/comment.png"></image>
+            <view class="comment_num">1000个评论</view>
+        </view>
+    </view>
+
+    <view class="comment_list">
+        <view class="comment_item" wx:for="{{detail.replyList}}" wx:key="index">
+            <view class="comment_user_info flex-box-container">
+                <view class="avatar">
+                    <image src="{{item.replyAvatarUrl}}"></image>
+                </view>
+                <view class="flex middle_sec">
+                    <view class="nickname">{{item.userName}}</view>
+                    <view class="comment">{{item.replyInfo}}</view>
+                </view>
+                <view class="comment_time">
+                    <view>{{item.sendTime}}</view>
+                    <view bindtap="handleClickReply" data-msgId="{{item.msgId}}" data-parentId="{{item.id}}" class="reply">回复</view>
+                </view>
+            </view>
+            <view class="reply_list">
+                <block wx:for="{{item.replyList}}" wx:for-index="index1"
+                       wx:for-item="item1" wx:key="index1">
+                    <view class="reply_message flex-box-align">
+                        <view class="avatar">
+                            <image src="{{item1.replyAvatarUrl}}"></image>
+                        </view>
+                        <view class="flex middle_sec">
+                            <view>
+                                <text class="nickname">{{item1.replyName}}</text>
+                                <text class="reply_text">回复</text>
+                                <text class="nickname">{{item1.userName}}</text>
+                            </view>
+                            <view class="comment">{{item1.replyInfo}}</view>
+                        </view>
+                        <view class="comment_time">
+                            <view>{{item1.sendTime}}</view>
+                            <view bindtap="handleClickReply" data-msgId="{{item.msgId}}" data-parentId="{{item.id}}" class="reply">回复</view>
+                        </view>
+                    </view>
+                </block>
+
+            </view>
+        </view>
+    </view>
+
+    <view class="send_message_modal flex-box-align">
+        <view class="flex">
+            <input type="text" placeholder="说点什么..."
+                   maxlength="28"
+                   value="{{replyInfo}}" focus="{{focus}}"
+                   bindinput="handleChange"/>
+        </view>
+        <view class="btn-send" bindtap="handleClickSend">发送</view>
+    </view>
+</view>

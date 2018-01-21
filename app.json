@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/publish/publish",
+    "pages/video/video",
+    "pages/detail/detail",
+    "pages/leader/leader"
+  ],
+  "window": {
+    "navigationBarTitleText": "Demo"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,167 @@
+@import "../../common/common.wxss";
+
+.video {
+    position: relative;
+    width: 750rpx;
+    height: 556rpx;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+}
+
+.btns {
+    position: absolute;
+    right: 12rpx;
+    bottom: 10rpx;
+}
+
+.btns .btn-like {
+    width: 55rpx;
+    height: 55rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+.btns .btn-share {
+    width: 55rpx;
+    height: 55rpx;
+    vertical-align: middle;
+}
+
+.play_num {
+    margin: 19rpx 0 38rpx 12rpx;
+    font-size: 18rpx;
+    color: #666;
+}
+
+.item {
+    font-size: 24rpx;
+    color: #666;
+    margin-bottom: 17rpx;
+    padding-left: 12rpx;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 28rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+}
+
+.latest_user {
+    color: #992424;
+}
+
+.item image {
+    width: 20rpx;
+    height: 20rpx;
+    vertical-align: middle;
+    margin-right: 17rpx;
+}
+
+.comment_list {
+    margin-bottom: 94rpx;
+}
+
+.comment_item {
+    padding: 27rpx 12rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+}
+
+.comment_user_info {
+    margin-bottom: 30rpx;
+}
+
+.avatar {
+    width: 74rpx;
+    height: 74rpx;
+}
+
+.avatar image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.middle_sec {
+    margin-left: 21rpx;
+}
+
+.nickname {
+    color: #992424;
+    font-size: 24rpx;
+}
+
+.comment {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.reply_text {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.comment_time {
+    font-size: 18rpx;
+    color: #999;
+}
+
+.comment_time view:first-child {
+    margin-bottom: 12rpx;
+}
+
+.reply_message {
+    margin-left: 96rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+    padding-bottom: 27rpx;
+}
+
+.reply_list .reply_message:last-child {
+    border-bottom: 0;
+}
+
+.send_message_modal {
+    position: fixed;
+    height: 94rpx;
+    line-height: 94rpx;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*padding: 19rpx 30rpx 19rpx 12rpx;*/
+    border-top: 1rpx solid #e9e9e9;
+    background-color: #fff;
+}
+
+.send_message_modal input {
+    height: 94rpx;
+    line-height: 94rpx;
+    margin-left: 12rpx;
+    font-size: 24rpx;
+
+}
+
+.btn-send {
+    width: 132rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    background-color: #992424;
+    border-radius: 28rpx;
+    font-size: 24rpx;
+    color: #fff;
+    text-align: center;
+    margin-right: 30rpx;
+}
+
+
+.share {
+    position: absolute;
+}
+
+.reply {
+    font-size: 24rpx;
+    text-align: center;
+    color: #333;
+}

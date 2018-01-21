@@ -1,0 +1,70 @@
+@import "../../common/common.wxss";
+
+.header {
+    height: 361rpx;
+    background-color: #992424;
+}
+
+.leader image {
+    width: 42rpx;
+    height: 39rpx;
+    vertical-align: middle;
+    margin-bottom: 15rpx;
+}
+
+.like image {
+    width: 38rpx;
+    height: 33rpx;
+    vertical-align: middle;
+    margin-bottom: 15rpx;
+}
+
+.leader, .like {
+    padding-top: 89rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 24rpx;
+}
+
+.avatar {
+    text-align: center;
+    padding-top: 64rpx;
+}
+
+.avatar image {
+    width: 176rpx;
+    height: 176rpx;
+    vertical-align: middle;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 0 74rpx;
+}
+
+.avatar view {
+    font-size: 36rpx;
+    margin-top: 25rpx;
+    color: #ffffff;
+}
+
+.leader_item {
+    padding: 24rpx 50rpx 24rpx 0;
+    margin-left: 42rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+}
+
+.leader_item_nickname {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.hitcount {
+    font-size: 30rpx;
+}
+
+.leader_item_avatar image {
+    width: 74rpx;
+    height: 74rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 31rpx 0 27rpx;
+}

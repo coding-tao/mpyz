@@ -1,0 +1,30 @@
+<view class="leader_board">
+    <view class="header flex-box-justify">
+        <view class="leader">
+            <image src="../../assets/icon_leader.png"></image>
+            <view>排名</view>
+            <view>{{leader.ranking}}</view>
+        </view>
+        <view class="avatar">
+            <image src="{{userInfo.avatarUrl}}"></image>
+            <view>{{userInfo.nickName}}</view>
+        </view>
+        <view class="like">
+            <image src="../../assets/icon_leader_like.png"></image>
+            <view>点赞</view>
+            <view>{{leader.hitCount}}</view>
+        </view>
+    </view>
+    <view class="leader_list">
+        <block wx:for="{{leader.leaderboardTop}}" wx:key="index">
+            <view class="leader_item flex-box-align">
+                <view>{{item.ranking}}.</view>
+                <view class="leader_item_avatar">
+                    <image src="{{item.avatarUrl}}"></image>
+                </view>
+                <view class="leader_item_nickname flex">{{item.nickName}}</view>
+                <view class="hitcount">{{item.hitCount}}</view>
+            </view>
+        </block>
+    </view>
+</view>

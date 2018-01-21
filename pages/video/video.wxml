@@ -1,0 +1,14 @@
+<view class="video_publish" style="height: {{windowHeight}}">
+    <view class="video_content flex-box-container">
+        <view class="video_uploaded">
+            <video src="{{src}}" controls="false" show-play-btn="false" show-center-play-btn="false" bindplay="handlePlay"></video>
+            <!--<block wx:if="{{showPreview}}">-->
+                <!--<cover-view class="play">-->
+                    <!--预览-->
+                <!--</cover-view>-->
+            <!--</block>-->
+        </view>
+        <textarea type="text" value="{{msgContent}}" bindinput="handleChange" placeholder="这一刻说点什么吧" />
+    </view>
+    <view class="btn-publish" bindtap="handleClickPublish">发布</view>
+</view>

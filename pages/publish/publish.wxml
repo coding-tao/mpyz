@@ -1,0 +1,10 @@
+<view class="publish_list flex-box-container">
+    <block wx:for="{{publish}}" wx:key="index">
+        <view class="publish_item" id="{{item.id}}" bindtap="handleClickPublish">
+            <image src="{{item.infos[1].fileUrl}}"></image>
+            <view class="title">
+                <view>{{item.msgContent}}</view>
+            </view>
+        </view>
+    </block>
+</view>

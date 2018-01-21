@@ -1,0 +1,258 @@
+@import "../../common/common.wxss";
+
+.mpyz_home {
+    position: relative;
+}
+
+.head_nav {
+    background-color: #992424;
+    height: 89rpx;
+    line-height: 89rpx;
+}
+
+.home_wrapper {
+    position: relative;
+}
+
+.btn-select {
+    margin-left: 12rpx;
+    width: 40rpx;
+    height: 89rpx;
+}
+
+.btn-video {
+    width: 40rpx;
+    height: 89rpx;
+    margin-right: 12rpx;
+}
+
+.btn-select image {
+    width: 36rpx;
+    height: 28rpx;
+    vertical-align: middle;
+
+}
+
+.btn-video image {
+    width: 43rpx;
+    height: 37rpx;
+    vertical-align: middle;
+}
+
+.head_nav .nav {
+    text-align: center;
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.nav text:first-child {
+    margin-right: 35rpx;
+    position: relative;
+}
+
+.selected:after {
+    content: "";
+    position: absolute;
+    width: 9rpx;
+    height: 9rpx;
+    bottom: -10rpx;
+    left: 50%;
+    margin-left: -4.5rpx;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.video_item {
+    width: 357rpx;
+    height: 357rpx;
+    margin: 12rpx;
+    position: relative;
+}
+
+.video_item:nth-child(2n-1) {
+    margin-right: 0;
+}
+
+.main_img image {
+    width: 357rpx;
+    height: 357rpx;
+    vertical-align: middle;
+}
+
+.video_info {
+    width: 100%;
+    position: absolute;
+    bottom: 12rpx;
+    left: 0;
+    color: #fff;
+}
+
+.avatar_info {
+    margin-left: 15rpx;
+}
+
+.zan_num {
+    margin-right: 15rpx;
+}
+
+.avatar_info image {
+    width: 44rpx;
+    height: 44rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 13rpx;
+}
+
+.avatar_info text {
+    font-size: 22rpx;
+}
+
+.zan_num image {
+    width: 18rpx;
+    height: 16rpx;
+    margin-right: 6rpx;
+}
+
+.zan_num text {
+    font-size: 18rpx;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 570rpx;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    transition: left .3s;
+}
+
+.me_fixed_modal {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0rpx;
+    width: 570rpx;
+    height: 100%;
+    background-color: #fff;
+}
+
+.content_animation {
+    position: fixed;
+    width: 100%;
+    left: 570rpx;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: left .4s;
+}
+
+.me_info {
+    width: 100%;
+    height: 363rpx;
+    background-color: #82141b;
+    text-align: center;
+    font-size: 36rpx;
+    color: #fff;
+}
+
+.me_info image {
+    width: 174rpx;
+    height: 174rpx;
+    border: 4rpx solid #fff;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-bottom: 25rpx;
+    margin-top: 65rpx;
+}
+
+.cell {
+    font-size: 24rpx;
+    color: #525252;
+    padding: 30rpx 0;
+    margin-left: 46rpx;
+    border-bottom: 2rpx solid #e9e9e9;
+}
+
+.cell image {
+    width: 9rpx;
+    height: 16rpx;
+    margin-right: 37rpx;
+}
+
+.cover {
+    position: fixed;
+    width: 750rpx;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cover image {
+    width: 100%;
+    height: 100%;
+}
+
+.service_modal {
+    z-index: 10;
+    position: fixed;
+    background-color: #fff;
+    width: 501rpx;
+    height: 350rpx;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.service_modal .title {
+    margin-top: 44rpx;
+    margin-bottom: 51rpx;
+    font-size: 34rpx;
+    text-align: center;
+}
+
+.service_modal {
+    padding-bottom: 51rpx;
+}
+
+.service_content view {
+    font-size: 30rpx;
+    color: #666;
+    margin-bottom: 39rpx;
+    margin-left: 76rpx;
+}
+
+.service_content view:last-child {
+    margin-bottom: 0;
+}
+
+.btn-close {
+    position: absolute;
+    right: 19rpx;
+    top: 16rpx;
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.btn-close image {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.service_overlay {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
