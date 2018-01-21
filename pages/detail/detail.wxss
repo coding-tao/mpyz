@@ -1,39 +1,63 @@
 @import "../../common/common.wxss";
-
+.video_detail{
+    height: 100%;
+    background-color: #fff;
+}
 .video {
     position: relative;
     width: 750rpx;
-    height: 556rpx;
+    height: 491rpx;
+    background-color: #000;
+    padding-bottom: 65rpx;
 }
 
 .video video {
+    display: block;
+    margin: 0 auto;
     width: 100%;
     height: 100%;
 }
 
 .btns {
     position: absolute;
-    right: 12rpx;
+    right: 0rpx;
     bottom: 10rpx;
 }
 
-.btns .btn-like {
+button{
     width: 55rpx;
     height: 55rpx;
     vertical-align: middle;
-    margin-right: 10rpx;
+    z-index: 999;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    opacity:0;
+    -webkit-opacity:0;
 }
 
-.btns .btn-share {
+.btn-like {
+    position: absolute;
+    right: 77rpx;
+    bottom: 10rpx;
     width: 55rpx;
     height: 55rpx;
     vertical-align: middle;
+}
+
+ .btn-share {
+    position: absolute;
+    right: 12rpx;
+    bottom: 10rpx;
+    width: 55rpx;
+    height: 55rpx;
+    vertical-align: middle;
+    z-index: 99;
 }
 
 .play_num {
     margin: 19rpx 0 38rpx 12rpx;
     font-size: 18rpx;
-    color: #666;
+    color: #999;
 }
 
 .item {
@@ -51,6 +75,11 @@
 
 .latest_user {
     color: #992424;
+    font-size: 24rpx;
+}
+.latest_comment{
+    font-size: 24rpx;
+    color: #666;
 }
 
 .item image {
@@ -62,6 +91,7 @@
 
 .comment_list {
     margin-bottom: 94rpx;
+    background-color: #fff;
 }
 
 .comment_item {
@@ -158,6 +188,8 @@
 
 .share {
     position: absolute;
+    right:12rpx;
+    bottom:10rpx;
 }
 
 .reply {

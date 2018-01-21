@@ -60,6 +60,7 @@ App({
                 let encryptedData = item.encryptedData,
                     iv = item.iv,
                     sessionId = wx.getStorageSync("sessionId");
+                console.log(item.iv)
                 util.http(CONSTANT.URL.USER.SAVEUSERINFO, {
                     encryptedData: encryptedData,
                     iv: encryptedData,

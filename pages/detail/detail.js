@@ -14,8 +14,8 @@ Page({
             console.log(res.target)
         }
         return {
-            title: '自定义转发标题',
-            path: '/page/user?id=123',
+            title: this.data.detail.msgContent,
+            path: `/pages/detail/detail?id=${this.data.msgId}`,
             success: function(res) {
                 // 转发成功
             },
@@ -45,6 +45,9 @@ Page({
         }, null, ()=>{
             this.getDetail()
         })
+    },
+    dd(){
+        console.log(11111)
     },
     videoPlay(){
         const { msgId, playTime } = this.data;

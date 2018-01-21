@@ -20,7 +20,7 @@
                     </view>
                     <view class="video_info flex-box-align">
                         <view class="avatar_info flex">
-                            <image src="{{item.avatarUrl}}"></image>
+                            <image src="{{item.avatarUrl?item.avatarUrl:'../../assets/avatar.png'}}"></image>
                             <text>{{item.name}}</text>
                         </view>
                         <view class="zan_num">

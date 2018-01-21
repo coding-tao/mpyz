@@ -2,6 +2,7 @@
 
 .mpyz_home {
     position: relative;
+    background-color: #F5F5F5;
 }
 
 .head_nav {
@@ -16,7 +17,7 @@
 
 .btn-select {
     margin-left: 12rpx;
-    width: 40rpx;
+    width: 80rpx;
     height: 89rpx;
 }
 
@@ -27,8 +28,8 @@
 }
 
 .btn-select image {
-    width: 36rpx;
-    height: 28rpx;
+    width: 25rpx;
+    height: 21rpx;
     vertical-align: middle;
 
 }
@@ -41,6 +42,8 @@
 
 .head_nav .nav {
     text-align: center;
+    position: relative;
+    left: -20rpx;
     font-size: 30rpx;
     color: #fff;
 }
@@ -65,7 +68,7 @@
 .video_item {
     width: 357rpx;
     height: 357rpx;
-    margin: 12rpx;
+    margin: 12rpx 12rpx 0;
     position: relative;
 }
 

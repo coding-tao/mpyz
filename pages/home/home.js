@@ -37,7 +37,7 @@ Page({
         this.setData({
             userInfo: wx.getStorageSync("userInfo")
         })
-        util.http(constant.URL.INFO.HOMEVIDEOLIST, { pageIndex: pageIndex, pageSize: 50 }, 'POST', (res) => {
+        util.http(constant.URL.INFO.HOMEVIDEOLIST, { pageIndex: pageIndex, pageSize: 10 }, 'POST', (res) => {
             self.setData({
                 homeList: res.data,
             })

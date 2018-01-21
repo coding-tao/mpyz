@@ -10,13 +10,18 @@ Page({
         this.setData({
             userInfo: wx.getStorageSync("userInfo")
         })
+        this.getList()
+    },
+    onLoad() {
+
+    },
+    getList(){
         util.http(constant.URL.USER.GETLEADERBOARDS, {}, "POST", (data) => {
             this.setData({
                 leader: data.data.bussData
             })
-        }, null, null)
-    },
-    onLoad() {
-
+        }, null, ()=>{
+            this.getList()
+        })
     }
 })
