@@ -31,21 +31,47 @@ Page({
     handleClickPublish() {
         const {msgContent, src} = this.data;
         let sessionId = wx.getStorageSync("sessionId");
+        if (!msgContent){
+            wx.showToast({
+                title: '内容不能为空',
+                image: '../../assets/fail.png',
+                duration: 1500
+            })
+            return;
+        }
+        let regRule = /\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g;
+        if (msgContent.match(regRule)) {
+            wx.showToast({
+                title: '禁止发表情',
+                image: '../../assets/fail.png',
+                duration: 1500
+            })
+            return;
+        } 
+        console.log(src,'ee')
         wx.uploadFile({
             url: constant.URL.INFO.PUBLISHVIDEO+"?sessionId="+sessionId,
             filePath: src,
             name: 'videoFile',
             formData: { msgContent: msgContent},
-            success: (data) => {
-                console.log(data)
-                wx.showToast({
-                    title: data.msg,
-                    icon: 'success',
-                    duration: 5000
-                });
-                wx.redirectTo({
-                    url: "/pages/home/home"
-                })
+            success: ({data}) => {
+                var data = JSON.parse(data);
+                if(data.status == 200){
+                    wx.showToast({
+                        title:'发布成功',
+                        icon: 'success',
+                        duration: 1500
+                    });
+                    wx.redirectTo({
+                        url: "/pages/home/home"
+                    })
+                }else{
+                    wx.showToast({
+                        title: data.msg,
+                        image: '../../assets/fail.png',
+                        duration: 1500
+                    });
+                }
             },
             fail(data) {
                 console.log('fail------');

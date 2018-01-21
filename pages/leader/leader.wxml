@@ -6,7 +6,7 @@
             <view>{{leader.ranking}}</view>
         </view>
         <view class="avatar">
-            <image src="{{userInfo.avatarUrl}}"></image>
+            <image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'../../assets/avatar.png'}}"></image>
             <view>{{userInfo.nickName}}</view>
         </view>
         <view class="like">
